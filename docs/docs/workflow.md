@@ -3,7 +3,7 @@ id: workflow
 title: The Klicker-Workflow
 ---
 
-In the Klicker UZH, sessions are the foundational concept on which all of the other functionality is built. A single Klicker session corresponds to a single event during which the Klicker is planned to be used (e.g., a 1.5h lecture block). Klicker sessions are structured such that they can be started at the beginning of an event and closed after its completion (decoupled from the actual timing of questions posed).
+Sessions are the fundamental concept on which all of the other functionality of Klicker UZH is built. A single Klicker session corresponds to a single event during which the Klicker is planned to be used (e.g., a 1.5h lecture block). Klicker sessions are structured such that they can be started at the beginning of an event and closed after its completion (decoupled from the actual timing of questions posed).
 
 During an active Klicker session, the speaker can pose the questions that have been assigned to the respective session. The speaker can further enable the optional audience-to-speaker interactions, allowing the audience to rate the speed and difficulty of the session as well as to give the speaker open-form feedback.
 
