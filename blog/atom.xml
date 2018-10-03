@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://uzh-bf.github.io/klicker-uzh/blog</id>
+    <title> Blog</title>
+    <updated>2017-08-18T06:00:00Z</updated>
+    <generator>Feed for Node.js</generator>
+    <link rel="alternate" href="https://uzh-bf.github.io/klicker-uzh/blog"/>
+    <subtitle>The best place to stay up-to-date with the latest  news and events.</subtitle>
+    <logo>https://uzh-bf.github.io/klicker-uzh/img/klicker_uzh_logo.png</logo>
+    <rights>Copyright &amp;copy; 2018 IBF Teaching Center, Department of Banking and Finance, University of Zurich. All rights reserved.
+Products and Services displayed herein are trademarks or registered trademarks of their respective owners.</rights>
+    <entry>
+        <title type="html"><![CDATA[Introducing Test]]></title>
+        <id>https://uzh-bf.github.io/klicker-uzh/blog/2017/08/18/Test.html</id>
+        <link href="https://uzh-bf.github.io/klicker-uzh/blog/2017/08/18/Test.html">
+        </link>
+        <updated>2017-08-18T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>Lorem Ipsum...</p> ]]></summary>
+        <author>
+            <name>Lisa Liechti</name>
+            <uri>https://twitter.com/foobarbaz</uri>
+        </author>
+    </entry>
+</feed>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title> Blog</title>
+        <link>https://uzh-bf.github.io/klicker-uzh/blog</link>
+        <description>The best place to stay up-to-date with the latest  news and events.</description>
+        <lastBuildDate>Fri, 18 Aug 2017 06:00:00 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>Feed for Node.js</generator>
+        <image>
+            <title> Blog</title>
+            <url>https://uzh-bf.github.io/klicker-uzh/img/klicker_uzh_logo.png</url>
+            <link>https://uzh-bf.github.io/klicker-uzh/blog</link>
+        </image>
+        <copyright>Copyright &amp;copy; 2018 IBF Teaching Center, Department of Banking and Finance, University of Zurich. All rights reserved.
+Products and Services displayed herein are trademarks or registered trademarks of their respective owners.</copyright>
+        <item>
+            <title><![CDATA[Introducing Test]]></title>
+            <link>https://uzh-bf.github.io/klicker-uzh/blog/2017/08/18/Test.html</link>
+            <guid>https://uzh-bf.github.io/klicker-uzh/blog/2017/08/18/Test.html</guid>
+            <pubDate>Fri, 18 Aug 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Lorem Ipsum...</p> ]]></description>
+        </item>
+    </channel>
+</rss>
