@@ -4,7 +4,7 @@
         <title> Blog</title>
         <link>https://uzh-bf.github.io/klicker-uzh/blog</link>
         <description>The best place to stay up-to-date with the latest  news and events.</description>
-        <lastBuildDate>Fri, 18 Aug 2017 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 03 Oct 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -16,9 +16,9 @@
 Products and Services displayed herein are trademarks or registered trademarks of their respective owners.</copyright>
         <item>
             <title><![CDATA[Introducing Test]]></title>
-            <link>https://uzh-bf.github.io/klicker-uzh/blog/2017/08/18/Test.html</link>
-            <guid>https://uzh-bf.github.io/klicker-uzh/blog/2017/08/18/Test.html</guid>
-            <pubDate>Fri, 18 Aug 2017 06:00:00 GMT</pubDate>
+            <link>https://uzh-bf.github.io/klicker-uzh/blog/2018/10/03/Test.html</link>
+            <guid>https://uzh-bf.github.io/klicker-uzh/blog/2018/10/03/Test.html</guid>
+            <pubDate>Wed, 03 Oct 2018 06:00:00 GMT</pubDate>
             <description><![CDATA[<p>Hello World</p> ]]></description>
         </item>
     </channel>

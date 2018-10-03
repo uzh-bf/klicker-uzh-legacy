@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://uzh-bf.github.io/klicker-uzh/blog</id>
     <title> Blog</title>
-    <updated>2017-08-18T06:00:00Z</updated>
+    <updated>2018-10-03T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://uzh-bf.github.io/klicker-uzh/blog"/>
     <subtitle>The best place to stay up-to-date with the latest  news and events.</subtitle>
@@ -11,10 +11,10 @@
 Products and Services displayed herein are trademarks or registered trademarks of their respective owners.</rights>
     <entry>
         <title type="html"><![CDATA[Introducing Test]]></title>
-        <id>https://uzh-bf.github.io/klicker-uzh/blog/2017/08/18/Test.html</id>
-        <link href="https://uzh-bf.github.io/klicker-uzh/blog/2017/08/18/Test.html">
+        <id>https://uzh-bf.github.io/klicker-uzh/blog/2018/10/03/Test.html</id>
+        <link href="https://uzh-bf.github.io/klicker-uzh/blog/2018/10/03/Test.html">
         </link>
-        <updated>2017-08-18T06:00:00Z</updated>
+        <updated>2018-10-03T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p>Hello World</p> ]]></summary>
         <author>
             <name>Lisa Liechti</name>
