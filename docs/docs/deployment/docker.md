@@ -1,7 +1,7 @@
 ---
 id: deployment_docker
-title: Docker Stuff
+title: Docker
 hide_title: true
 ---
 
-# Docker Stuff
+# Docker
