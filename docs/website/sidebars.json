@@ -29,6 +29,6 @@
       "contributing/contributing_repositories"
     ],
     "FAQ": ["faq/faq"],
-    "Other": ["other/roadmap", "other/troubleshooting"]
+    "Other": ["other/troubleshooting"]
   }
 }

@@ -20,6 +20,10 @@ const siteConfig = {
   headerLinks: [
     { doc: 'introduction/getting_started', label: 'Docs' },
     { doc: 'faq/faq', label: 'FAQ' },
+    {
+      href: 'https://github.com/uzh-bf/klicker-uzh/projects/1',
+      label: 'Roadmap',
+    },
   ],
   /* path to images for header/footer */
   headerIcon: 'img/klicker_uzh_logo.png',
