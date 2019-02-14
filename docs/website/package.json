@@ -2,7 +2,7 @@
   "scripts": {
     "examples": "docusaurus-examples",
     "start": "docusaurus-start",
-    "start:watch": "nodemon -w ../docs -w ../website --ignore ../website/i18n",
+    "start:watch": "nodemon -w siteConfig.js -w sidebars.json -w ../docs -w ../website --ignore ../website/i18n",
     "build": "docusaurus-build",
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "cross-env": "5.2.0",
-    "docusaurus": "1.4.0",
-    "nodemon": "1.18.4"
+    "docusaurus": "1.7.2",
+    "nodemon": "1.18.10"
   }
 }

@@ -3,71 +3,96 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "An open source instant audience response system",
+    "tagline": "Open source instant audience response system",
     "docs": {
-      "audience_view": {
-        "title": "Audience View"
-      },
-      "delete_account": {
+      "advanced/delete_account": {
         "title": "Deleting your account"
       },
-      "evaluation": {
-        "title": "Evaluation"
-      },
-      "faq": {
-        "title": "Frequently Asked Questions"
-      },
-      "introduction": {
-        "title": "Introduction"
-      },
-      "language": {
+      "advanced/language": {
         "title": "Language Settings"
       },
-      "navigation": {
-        "title": "Navigation"
-      },
-      "question_archive": {
+      "advanced/question_archive": {
         "title": "Archive Questions"
       },
-      "question_create": {
-        "title": "Create a Question"
-      },
-      "question_delete": {
+      "advanced/question_delete": {
         "title": "Delete Questions"
       },
-      "question_edit": {
+      "advanced/question_edit": {
         "title": "Edit a Question"
       },
-      "question_pool": {
-        "title": "Question Pool"
-      },
-      "session_create": {
-        "title": "Create a Session"
-      },
-      "session_list": {
-        "title": "Session List"
-      },
-      "session_running": {
-        "title": "Running Session"
-      },
-      "settings": {
+      "advanced/settings": {
         "title": "User Settings"
       },
-      "workflow": {
-        "title": "The Klicker-Workflow"
+      "architecture/architecture_overview": {
+        "title": "Architecture Overview",
+        "sidebar_label": "Overview"
+      },
+      "basics/audience_view": {
+        "title": "Audience View"
+      },
+      "basics/evaluation": {
+        "title": "Evaluation"
+      },
+      "basics/navigation": {
+        "title": "Navigation"
+      },
+      "basics/question_create": {
+        "title": "Create a Question"
+      },
+      "basics/question_pool": {
+        "title": "Question Pool"
+      },
+      "basics/session_create": {
+        "title": "Create a Session"
+      },
+      "basics/session_list": {
+        "title": "Session List"
+      },
+      "basics/session_running": {
+        "title": "Running Session"
+      },
+      "contributing/contributing_guidelines": {
+        "title": "Guidelines"
+      },
+      "contributing/contributing_repositories": {
+        "title": "Repositories"
+      },
+      "deployment/deployment_configuration": {
+        "title": "Configuration"
+      },
+      "deployment/deployment_docker": {
+        "title": "Docker Stuff"
+      },
+      "faq/faq": {
+        "title": "Frequently Asked Questions"
+      },
+      "introduction/concepts": {
+        "title": "Core Concepts"
+      },
+      "introduction/getting_started": {
+        "title": "Getting Started",
+        "sidebar_label": "Getting Started"
+      },
+      "other/roadmap": {
+        "title": "Roadmap"
+      },
+      "other/troubleshooting": {
+        "title": "Troubleshooting"
       }
     },
     "links": {
-      "How-To": "How-To",
-      "FAQ": "FAQ",
-      "Blog": "Blog"
+      "Docs": "Docs",
+      "FAQ": "FAQ"
     },
     "categories": {
-      "Get Started": "Get Started",
-      "Questions": "Questions",
-      "Sessions": "Sessions",
-      "Evaluation": "Evaluation",
-      "Settings": "Settings"
+      "Introduction": "Introduction",
+      "Basic Tutorial": "Basic Tutorial",
+      "Advanced Tutorial": "Advanced Tutorial",
+      "Architecture": "Architecture",
+      "Deployment": "Deployment",
+      "Contributing": "Contributing",
+      "FAQ": "FAQ",
+      "Other": "Other"
     }
   },
   "pages-strings": {

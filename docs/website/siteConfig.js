@@ -12,15 +12,14 @@ const siteConfig = {
     '' /* empty, as we have the logo in the header title for your website */,
   title_index: 'Klicker',
   subtitle_index: 'UZH',
-  tagline: 'An open source instant audience response system',
+  tagline: 'Open source instant audience response system',
   url: 'https://uzh-bf.github.io' /* your website url */,
   baseUrl: '/klicker-uzh/' /* base url for your project */,
   projectName: 'klicker-uzh',
   organizationName: 'uzh-bf',
   headerLinks: [
-    { doc: 'introduction', label: 'How-To' },
-    { doc: 'faq', label: 'FAQ' },
-    { blog: true, label: 'Blog' },
+    { doc: 'introduction/getting_started', label: 'Docs' },
+    { doc: 'faq/faq', label: 'FAQ' },
   ],
   /* path to images for header/footer */
   headerIcon: 'img/klicker_uzh_logo.png',
@@ -52,6 +51,13 @@ const siteConfig = {
   stylesheets: ['https://fonts.googleapis.com/css?family=Open+Sans'],
   // You may provide arbitrary config keys to be used as needed by your template.
   repoUrl: 'https://github.com/uzh-bf/klicker-uzh',
+
+  // On page navigation for the current documentation page.
+  onPageNav: 'separate',
+  // No .html extensions for paths.
+  cleanUrl: true,
+  // Collapsible categories in the side navigation.
+  docsSideNavCollapsible: true,
 }
 
 module.exports = siteConfig
