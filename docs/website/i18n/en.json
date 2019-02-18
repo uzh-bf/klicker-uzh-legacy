@@ -57,9 +57,6 @@
       "contributing/contributing_repositories": {
         "title": "Repositories"
       },
-      "deployment/deployment_configuration": {
-        "title": "Configuration"
-      },
       "deployment/deployment_docker": {
         "title": "Docker"
       },

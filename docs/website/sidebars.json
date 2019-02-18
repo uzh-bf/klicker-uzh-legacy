@@ -22,8 +22,7 @@
     "Architecture": ["architecture/architecture_overview"],
     "Deployment": [
       "deployment/deployment_requirements",
-      "deployment/deployment_docker",
-      "deployment/deployment_configuration"
+      "deployment/deployment_docker"
     ],
     "Contributing": [
       "contributing/contributing_guidelines",
