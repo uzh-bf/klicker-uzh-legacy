@@ -23,11 +23,11 @@ In case of any questions, please have a look if your problem has already been de
 
 Instead of using the publicly hosted version of the application (the official "Klicker UZH") it is also possible to host an instance on private infrastructure. This can be useful if an institution prefers to host their questions on private infrastructure only (e.g., if the question contents are sensitive). The only thing to keep in mind is that we kindly ask (as reinforced by the license) that any extensions of self-hosted instances be provided back to the open source project (as is good open source spirit).
 
-To deploy a private Klicker instance, we strongly recommend that you first familiarize yourself with the architecture of the application (see [Architecture Overview](architecture/overview.md)). The chapter on deployment (starting with the [Requirements](deployment/requirements.md)) will then lead you through the steps necessary to deploy the application yourself.
+To deploy a private Klicker instance, we strongly recommend that you first familiarize yourself with the architecture of the application (see [Architecture Overview](deployment/architecture.md)). The remainder of the chapter on deployment will then lead you through the steps necessary to deploy the application yourself.
 
 ## Contributing
 
-In the spirit of open source, we welcome any good-spirited contributions to the Klicker UZH (be it from institutions or individuals). To help in getting an overview of the entire application structure, we have put together some information about the [Application Architecture](architecture/overview) as well as an overview of the different [Repositores](contributing/repositories) in the project and their respective uses.
+In the spirit of open source, we welcome any good-spirited contributions to the Klicker UZH (be it from institutions or individuals). To help in getting an overview of the entire application structure, we have put together some information about the [Application Architecture](deployment/architecture.md) as well as an overview of the different [Repositores](contributing/repositories) in the project and their respective uses.
 
 It is generally a good idea to first get an orientation about the general direction of the project from the [Roadmap](https://github.com/uzh-bf/klicker-uzh/projects/1), as contributions should not be completely orthogonal or lead to duplicate work. Please feel free to create an issue on the `klicker-uzh` project if you are unsure about any specifics.
 

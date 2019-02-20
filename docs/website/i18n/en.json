@@ -23,10 +23,6 @@
       "advanced/settings": {
         "title": "User Settings"
       },
-      "architecture/architecture_overview": {
-        "title": "Architecture Overview",
-        "sidebar_label": "Overview"
-      },
       "basics/audience_view": {
         "title": "Audience View"
       },
@@ -54,8 +50,12 @@
       "contributing/contributing_guidelines": {
         "title": "Guidelines"
       },
-      "contributing/contributing_repositories": {
-        "title": "Repositories"
+      "contributing/contributing_setup": {
+        "title": "Development Setup"
+      },
+      "deployment/deployment_architecture": {
+        "title": "Architecture Overview",
+        "sidebar_label": "Architecture"
       },
       "deployment/deployment_docker": {
         "title": "Deploying the Klicker UZH"
@@ -90,7 +90,6 @@
       "Introduction": "Introduction",
       "Basic Tutorial": "Basic Tutorial",
       "Advanced Tutorial": "Advanced Tutorial",
-      "Architecture": "Architecture",
       "Deployment": "Deployment",
       "Contributing": "Contributing",
       "FAQ": "FAQ",
