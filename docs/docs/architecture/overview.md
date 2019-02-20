@@ -6,3 +6,17 @@ hide_title: true
 ---
 
 # Architecture Overview
+
+asd
+
+## React
+
+## Next.js
+
+## GraphQL
+
+## Node.js
+
+## Redis
+
+## MongoDB

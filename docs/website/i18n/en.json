@@ -58,7 +58,7 @@
         "title": "Repositories"
       },
       "deployment/deployment_docker": {
-        "title": "Docker"
+        "title": "Deploying the Klicker UZH"
       },
       "deployment/deployment_requirements": {
         "title": "Requirements"
