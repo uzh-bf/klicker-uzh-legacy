@@ -1,4 +1,13 @@
 {
+  "author": "Roland Schlaefli <roland.schlaefli@bf.uzh.ch>",
+  "engines": {
+    "yarn": "YARN NO LONGER USED - use npm instead."
+  },
+  "devDependencies": {
+    "cross-env": "5.2.0",
+    "docusaurus": "1.7.2",
+    "nodemon": "1.18.10"
+  },
   "scripts": {
     "examples": "docusaurus-examples",
     "start": "docusaurus-start",
@@ -10,10 +19,5 @@
     "rename-version": "docusaurus-rename-version",
     "publish:rschlaefli": "cross-env GIT_USER=rschlaefli CURRENT_BRANCH=master yarn run publish-gh-pages",
     "publish:alexscheitlin": "cross-env GIT_USER=AlexScheitlin CURRENT_BRANCH=master yarn run publish-gh-pages"
-  },
-  "devDependencies": {
-    "cross-env": "5.2.0",
-    "docusaurus": "1.7.2",
-    "nodemon": "1.18.10"
   }
 }

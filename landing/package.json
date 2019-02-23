@@ -1,8 +1,8 @@
 {
-  "name": "klicker-landing",
-  "description": "Landing Page for the KlickerUZH project",
-  "version": "1.0.0",
-  "author": "Roland Schlaefli <rolandschlaefi@gmail.com>",
+  "author": "Roland Schlaefli <roland.schlaefli@bf.uzh.ch>",
+  "engines": {
+    "yarn": "YARN NO LONGER USED - use npm instead."
+  },
   "dependencies": {
     "gatsby": "2.1.4",
     "gatsby-plugin-react-helmet": "3.0.6",
@@ -17,17 +17,12 @@
     "slick-carousel": "1.8.1",
     "styled-jsx": "3.2.1"
   },
-  "license": "AGPL-3.0",
+  "devDependencies": {
+    "prettier": "1.16.4"
+  },
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'"
-  },
-  "devDependencies": {
-    "prettier": "1.16.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/uzh-bf/klicker-landing"
   }
 }
