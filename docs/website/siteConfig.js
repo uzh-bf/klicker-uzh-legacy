@@ -43,9 +43,9 @@ const siteConfig = {
   },
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright:
-    'Copyright &copy; ' +
+    'Copyright ' +
     new Date().getFullYear() +
-    ' IBF Teaching Center, Department of Banking and Finance, University of Zurich. All rights reserved.\n' +
+    ' @ Teaching Center, Department of Banking and Finance, University of Zurich. All rights reserved.\n' +
     'Products and Services displayed herein are trademarks or registered trademarks of their respective owners.',
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
