@@ -10,11 +10,11 @@ When contributing to any KlickerUZH service or project, please ensure that you f
 
 ## Code Style
 
-The code style of KlickerUZH is checked using ESLint (https://eslint.org/). Our configuration is based on the Airbnb Javascript style guide (https://github.com/airbnb/javascript). Some rules have been overridden to fit the style of our project. The linter can be manually executed with `yarn lint`; it will automatically run on pre-commit.
+The code style of KlickerUZH is checked using ESLint (https://eslint.org/). Our configuration is based on the Airbnb Javascript style guide (https://github.com/airbnb/javascript). Some rules have been overridden to fit the style of our project. The linter can be manually executed with `npm run lint`; it will automatically run on pre-commit.
 
 ## Formatting
 
-All KlickerUZH code is to be formatted with Prettier (https://prettier.io/) to ensure a consistent code formatting over all projects. To simplify this process, we have added the `yarn format` command as well as a git hook that will format your code automatically on pre-commit. Please note that our CI will check the formatting and throw if erroneous formatting is encountered.
+All KlickerUZH code is to be formatted with Prettier (https://prettier.io/) to ensure a consistent code formatting over all projects. To simplify this process, we have added the `npm run format` command as well as a git hook that will format your code automatically on pre-commit. Please note that our CI will check the formatting and throw if erroneous formatting is encountered.
 
 ## Testing
 

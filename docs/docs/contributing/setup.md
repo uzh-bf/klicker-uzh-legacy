@@ -14,7 +14,6 @@ Please ensure that the following dependencies are available in your development 
 
 - Docker 18.0X+: https://www.docker.com/get-started
 - NodeJS 10 LTS: https://nodejs.org/en
-- Yarn: https://yarnpkg.com/en
 
 For specific installation instructions, please follow the documentation of the corresponding dependency.
 
@@ -78,8 +77,8 @@ Please note that the parts in brackets need to be filled in order for the applic
 
 ## Running the Application
 
-To be able to run a NodeJS application, its NPM dependencies need to be installed. Do this by running `yarn` in both repositories. This will fetch the exact package versions that the KlickerUZH has been developed with, ensuring that you will not encounter errors due to updated packages.
+To be able to run a NodeJS application, its NPM dependencies need to be installed. Do this by running `npm install` in both repositories. This will fetch the exact package versions that the KlickerUZH has been developed with, ensuring that you will not encounter errors due to updated packages.
 
-Once you have completed all of the previous steps (including completing the configuration files), you are ready to start the KlickerUZH in development mode. To do so, simply run `yarn dev` in both repositories from your command line.
+Once you have completed all of the previous steps (including completing the configuration files), you are ready to start the KlickerUZH in development mode. To do so, simply run `npm run dev` in both repositories from your command line.
 
 The klicker-api service should then show a GraphQL development environment at `http://localhost:4000/graphql`. The klicker-react service should serve the application frontend at `http://localhost:3000`.
