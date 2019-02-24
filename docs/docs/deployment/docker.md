@@ -8,7 +8,7 @@ hide_title: true
 
 As described in the section on the Klicker [Architecture](deployment/architecture.md), a Klicker application is composed of both an instance of _klicker-react_ for the frontend service as well as _klicker-api_ for the backend service.
 
-...
+To deploy the KlickerUZH to production, we recommend using a cloud service backed by Kubernetes, as this will offer the best scalability and reliability guarantees. However, the next section will also shortly describe an alternative way using simple Docker Compose scripts.
 
 ## Deployment with Docker Compose
 
