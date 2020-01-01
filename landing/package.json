@@ -6,7 +6,7 @@
   "dependencies": {
     "gatsby": "2.1.4",
     "gatsby-plugin-react-helmet": "3.0.6",
-    "gatsby-plugin-styled-jsx": "3.0.4",
+    "gatsby-plugin-styled-jsx": "3.1.17",
     "react": "16.8.2",
     "react-dom": "16.8.2",
     "react-helmet": "5.2.0",
