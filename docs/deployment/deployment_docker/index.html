@@ -54,7 +54,7 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Deploying the Klicker UZH</h1></header><article><div><span><p>As described in the section on the Klicker <a href="/klicker-uzh/docs/deployment/deployment_architecture">Architecture</a>, a Klicker application is composed of both an instance of <em>klicker-react</em> for the frontend service as well as <em>klicker-api</em> for the backend service.</p>
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Deploying the Klicker UZH</h1></header><article><div><span><p>As described in the section on the Klicker <a href="/klicker-uzh/docs/deployment/deployment_architecture">Architecture</a>, a Klicker application is composed of both an instance of <em>klicker-react</em> for the frontend service as well as <em>klicker-api</em> for the backend service.</p>
 <p>To deploy the KlickerUZH to production, we recommend using a cloud service backed by Kubernetes, as this will offer the best scalability and reliability guarantees. However, the next section will also shortly describe an alternative way using simple Docker Compose scripts.</p>
 <h2><a class="anchor" aria-hidden="true" id="deployment-with-docker-compose"></a><a href="#deployment-with-docker-compose" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deployment with Docker Compose</h2>
 <p>Alternatively to deploying the Klicker UZH to a Kubernetes cluster, the Klicker UZH could also be deployed using Docker Compose. This allows for a deployment to any machine that has a compatible version of Docker installed. It is recommended to only use this approach in local testing or to simulate a production instance.</p>
@@ -62,56 +62,56 @@
 <span class="hljs-attr">services:</span>
   <span class="hljs-comment"># klicker-react</span>
   <span class="hljs-comment"># see https://github.com/uzh-bf/klicker-react</span>
-  <span class="hljs-attr">react:</span>
+<span class="hljs-attr">  react:</span>
     <span class="hljs-comment"># use the prebuilt image from docker hub</span>
-    <span class="hljs-attr">image:</span> <span class="hljs-string">klicker-react</span>
+<span class="hljs-attr">    image:</span> <span class="hljs-string">klicker-react</span>
     <span class="hljs-comment"># alternatively build the image from sources</span>
     <span class="hljs-comment"># build: klicker-react</span>
-    <span class="hljs-attr">ports:</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-string">'3000:3000'</span>
-    <span class="hljs-attr">environment:</span>
-      <span class="hljs-attr">CACHE_REDIS_ENABLED:</span> <span class="hljs-string">'true'</span>
-      <span class="hljs-attr">CACHE_REDIS_HOST:</span> <span class="hljs-string">'redis'</span>
+<span class="hljs-attr">    ports:</span>
+<span class="hljs-bullet">      -</span> <span class="hljs-string">'3000:3000'</span>
+<span class="hljs-attr">    environment:</span>
+<span class="hljs-attr">      CACHE_REDIS_ENABLED:</span> <span class="hljs-string">'true'</span>
+<span class="hljs-attr">      CACHE_REDIS_HOST:</span> <span class="hljs-string">'redis'</span>
       <span class="hljs-comment"># ... other settings</span>
       <span class="hljs-comment"># see configuration.md</span>
 
   <span class="hljs-comment"># klicker-api</span>
   <span class="hljs-comment"># see https://github.com/uzh-bf/klicker-api</span>
-  <span class="hljs-attr">api:</span>
+<span class="hljs-attr">  api:</span>
     <span class="hljs-comment"># use the prebuilt image from docker hub</span>
-    <span class="hljs-attr">image:</span> <span class="hljs-string">klicker-api</span>
+<span class="hljs-attr">    image:</span> <span class="hljs-string">klicker-api</span>
     <span class="hljs-comment"># alternatively build the image from sources</span>
     <span class="hljs-comment"># build: klicker-api</span>
-    <span class="hljs-attr">ports:</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-string">'4000:3000'</span>
-    <span class="hljs-attr">environment:</span>
-      <span class="hljs-attr">APP_PORT:</span> <span class="hljs-number">3000</span>
-      <span class="hljs-attr">CACHE_REDIS_ENABLED:</span> <span class="hljs-string">'true'</span>
-      <span class="hljs-attr">CACHE_REDIS_HOST:</span> <span class="hljs-string">'redis'</span>
-      <span class="hljs-attr">MONGO_URL:</span> <span class="hljs-string">'mongodb/klicker'</span>
+<span class="hljs-attr">    ports:</span>
+<span class="hljs-bullet">      -</span> <span class="hljs-string">'4000:3000'</span>
+<span class="hljs-attr">    environment:</span>
+<span class="hljs-attr">      APP_PORT:</span> <span class="hljs-number">3000</span>
+<span class="hljs-attr">      CACHE_REDIS_ENABLED:</span> <span class="hljs-string">'true'</span>
+<span class="hljs-attr">      CACHE_REDIS_HOST:</span> <span class="hljs-string">'redis'</span>
+<span class="hljs-attr">      MONGO_URL:</span> <span class="hljs-string">'mongodb/klicker'</span>
       <span class="hljs-comment"># ... other settings</span>
       <span class="hljs-comment"># see configuration.md</span>
 
   <span class="hljs-comment"># redis cache</span>
   <span class="hljs-comment"># see https://hub.docker.com/_/redis</span>
-  <span class="hljs-attr">redis:</span>
-    <span class="hljs-attr">image:</span> <span class="hljs-string">'redis:3-32bit'</span>
-    <span class="hljs-attr">command:</span> <span class="hljs-string">redis-server</span> <span class="hljs-string">--appendonly</span> <span class="hljs-literal">yes</span>
-    <span class="hljs-attr">ports:</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-string">'6379:6379'</span>
-    <span class="hljs-attr">volumes:</span>
+<span class="hljs-attr">  redis:</span>
+<span class="hljs-attr">    image:</span> <span class="hljs-string">'redis:3-32bit'</span>
+<span class="hljs-attr">    command:</span> <span class="hljs-string">redis-server</span> <span class="hljs-bullet">--appendonly</span> <span class="hljs-literal">yes</span>
+<span class="hljs-attr">    ports:</span>
+<span class="hljs-bullet">      -</span> <span class="hljs-string">'6379:6379'</span>
+<span class="hljs-attr">    volumes:</span>
       <span class="hljs-comment"># define a volume for redis persistence</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-string">xyz:/data</span>
+<span class="hljs-attr">      - xyz:</span><span class="hljs-string">/data</span>
 
   <span class="hljs-comment"># mongodb document store</span>
   <span class="hljs-comment"># see https://hub.docker.com/_/mongo</span>
-  <span class="hljs-attr">mongodb:</span>
-    <span class="hljs-attr">image:</span> <span class="hljs-string">'mongo:4.0'</span>
-    <span class="hljs-attr">ports:</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-string">'27017:27017'</span>
-    <span class="hljs-attr">volumes:</span>
+<span class="hljs-attr">  mongodb:</span>
+<span class="hljs-attr">    image:</span> <span class="hljs-string">'mongo:4.0'</span>
+<span class="hljs-attr">    ports:</span>
+<span class="hljs-bullet">      -</span> <span class="hljs-string">'27017:27017'</span>
+<span class="hljs-attr">    volumes:</span>
       <span class="hljs-comment"># define a volume for the main mongodb data directory</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-string">xyz:/data/db</span>
+<span class="hljs-attr">      - xyz:</span><span class="hljs-string">/data/db</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="deployment-to-kubernetes"></a><a href="#deployment-to-kubernetes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deployment to Kubernetes</h2>
 <p>The recommended way of deploying the Klicker UZH to production is backed by a Kubernetes cluster. This allows for easy scaling and improves resiliency. The deployment to Kubernetes is composed of several steps that vary depending on the type of cluster that is used. These steps roughly go as follows:</p>
@@ -142,139 +142,139 @@ and <a href="https://github.com/uzh-bf/klicker-api/blob/master/src/klicker.conf.
 <span class="hljs-attr">kind:</span> <span class="hljs-string">ConfigMap</span>
 
 <span class="hljs-attr">metadata:</span>
-  <span class="hljs-attr">name:</span> <span class="hljs-string">klicker-api-config</span>
-  <span class="hljs-attr">namespace:</span> <span class="hljs-string">klicker</span>
+<span class="hljs-attr">  name:</span> <span class="hljs-string">klicker-api-config</span>
+<span class="hljs-attr">  namespace:</span> <span class="hljs-string">klicker</span>
 
 <span class="hljs-attr">data:</span>
   <span class="hljs-comment"># the application secret</span>
   <span class="hljs-comment"># used for JWT verification and other sensitive procedures</span>
-  <span class="hljs-attr">APP_SECRET:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  APP_SECRET:</span> <span class="hljs-string">'xyz'</span>
 
   <span class="hljs-comment"># the base url of the application (without protocol)</span>
-  <span class="hljs-attr">APP_BASE_URL:</span> <span class="hljs-string">'app.klicker.uzh.ch'</span>
+<span class="hljs-attr">  APP_BASE_URL:</span> <span class="hljs-string">'app.klicker.uzh.ch'</span>
 
   <span class="hljs-comment"># the subdomain of the api service</span>
-  <span class="hljs-attr">APP_DOMAIN:</span> <span class="hljs-string">'api.klicker.uzh.ch'</span>
+<span class="hljs-attr">  APP_DOMAIN:</span> <span class="hljs-string">'api.klicker.uzh.ch'</span>
 
   <span class="hljs-comment"># whether the cookies should be restricted to https</span>
-  <span class="hljs-attr">APP_HTTPS:</span> <span class="hljs-string">'true'</span>
-  <span class="hljs-attr">APP_SECURE:</span> <span class="hljs-string">'true'</span>
+<span class="hljs-attr">  APP_HTTPS:</span> <span class="hljs-string">'true'</span>
+<span class="hljs-attr">  APP_SECURE:</span> <span class="hljs-string">'true'</span>
 
   <span class="hljs-comment"># whether express should trust a forwarding proxy</span>
   <span class="hljs-comment"># needs to be set to get real client ips in a cloud environment (e.g., OpenShift)</span>
-  <span class="hljs-attr">APP_TRUST_PROXY:</span> <span class="hljs-string">'true'</span>
+<span class="hljs-attr">  APP_TRUST_PROXY:</span> <span class="hljs-string">'true'</span>
 
   <span class="hljs-comment"># settings and credentials for the redis cache service</span>
-  <span class="hljs-attr">CACHE_REDIS_ENABLED:</span> <span class="hljs-string">'true'</span>
-  <span class="hljs-attr">CACHE_REDIS_PASSWORD:</span> <span class="hljs-string">'xyz'</span>
-  <span class="hljs-attr">CACHE_REDIS_HOST:</span> <span class="hljs-string">redis-prod</span>
+<span class="hljs-attr">  CACHE_REDIS_ENABLED:</span> <span class="hljs-string">'true'</span>
+<span class="hljs-attr">  CACHE_REDIS_PASSWORD:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  CACHE_REDIS_HOST:</span> <span class="hljs-string">redis-prod</span>
 
   <span class="hljs-comment"># where the klicker application should be sending transactional emails from</span>
-  <span class="hljs-attr">EMAIL_FROM:</span> <span class="hljs-string">'klicker.support@uzh.ch'</span>
-  <span class="hljs-attr">EMAIL_HOST:</span> <span class="hljs-string">'smtp.uzh.ch'</span>
-  <span class="hljs-attr">EMAIL_PASSWORD:</span> <span class="hljs-string">'xyz'</span>
-  <span class="hljs-attr">EMAIL_USER:</span> <span class="hljs-string">'klicker.support@uzh.ch'</span>
+<span class="hljs-attr">  EMAIL_FROM:</span> <span class="hljs-string">'klicker.support@uzh.ch'</span>
+<span class="hljs-attr">  EMAIL_HOST:</span> <span class="hljs-string">'smtp.uzh.ch'</span>
+<span class="hljs-attr">  EMAIL_PASSWORD:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  EMAIL_USER:</span> <span class="hljs-string">'klicker.support@uzh.ch'</span>
 
   <span class="hljs-comment"># the full url of the main application database</span>
-  <span class="hljs-attr">MONGO_URL:</span> <span class="hljs-string">'xyz:xyz@1.1.1.1/klicker'</span>
+<span class="hljs-attr">  MONGO_URL:</span> <span class="hljs-string">'xyz:xyz@1.1.1.1/klicker'</span>
 
   <span class="hljs-comment"># the credentials and location of the main S3 bucket</span>
   <span class="hljs-comment"># this bucket is used for file uploads</span>
-  <span class="hljs-attr">S3_ACCESS_KEY:</span> <span class="hljs-string">'xyz'</span>
-  <span class="hljs-attr">S3_BUCKET:</span> <span class="hljs-string">'klicker-prod'</span>
-  <span class="hljs-attr">S3_ENABLED:</span> <span class="hljs-string">'true'</span>
-  <span class="hljs-attr">S3_ENDPOINT:</span> <span class="hljs-string">'klicker-files.s3.amazonaws.com'</span>
-  <span class="hljs-attr">S3_SECRET_KEY:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  S3_ACCESS_KEY:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  S3_BUCKET:</span> <span class="hljs-string">'klicker-prod'</span>
+<span class="hljs-attr">  S3_ENABLED:</span> <span class="hljs-string">'true'</span>
+<span class="hljs-attr">  S3_ENDPOINT:</span> <span class="hljs-string">'klicker-files.s3.amazonaws.com'</span>
+<span class="hljs-attr">  S3_SECRET_KEY:</span> <span class="hljs-string">'xyz'</span>
 
   <span class="hljs-comment"># miscellaneous security settings</span>
-  <span class="hljs-attr">SECURITY_CORS_ORIGIN:</span> <span class="hljs-string">'https://app.klicker.uzh.ch'</span>
-  <span class="hljs-attr">SECURITY_CORS_CREDENTIALS:</span> <span class="hljs-string">'true'</span>
-  <span class="hljs-attr">SECURITY_EXPECT_CT_ENABLED:</span> <span class="hljs-string">'false'</span>
-  <span class="hljs-attr">SECURITY_EXPECT_CT_REPORT_URI:</span> <span class="hljs-string">'xyz'</span>
-  <span class="hljs-attr">SECURITY_HSTS_ENABLED:</span> <span class="hljs-string">'false'</span>
-  <span class="hljs-attr">SECURITY_RATE_LIMIT_ENABLED:</span> <span class="hljs-string">'false'</span>
+<span class="hljs-attr">  SECURITY_CORS_ORIGIN:</span> <span class="hljs-string">'https://app.klicker.uzh.ch'</span>
+<span class="hljs-attr">  SECURITY_CORS_CREDENTIALS:</span> <span class="hljs-string">'true'</span>
+<span class="hljs-attr">  SECURITY_EXPECT_CT_ENABLED:</span> <span class="hljs-string">'false'</span>
+<span class="hljs-attr">  SECURITY_EXPECT_CT_REPORT_URI:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  SECURITY_HSTS_ENABLED:</span> <span class="hljs-string">'false'</span>
+<span class="hljs-attr">  SECURITY_RATE_LIMIT_ENABLED:</span> <span class="hljs-string">'false'</span>
 
   <span class="hljs-comment"># connection to an elastic apm service (optional)</span>
-  <span class="hljs-attr">SERVICES_APM_ENABLED:</span> <span class="hljs-string">'false'</span>
-  <span class="hljs-attr">SERVICES_APM_SECRET_TOKEN:</span> <span class="hljs-string">'xyz'</span>
-  <span class="hljs-attr">SERVICES_APM_SERVER_URL:</span> <span class="hljs-string">'xyz'</span>
-  <span class="hljs-attr">SERVICES_APM_SERVICE_NAME:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  SERVICES_APM_ENABLED:</span> <span class="hljs-string">'false'</span>
+<span class="hljs-attr">  SERVICES_APM_SECRET_TOKEN:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  SERVICES_APM_SERVER_URL:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  SERVICES_APM_SERVICE_NAME:</span> <span class="hljs-string">'xyz'</span>
 
   <span class="hljs-comment"># connection to apollo engine (optional)</span>
-  <span class="hljs-attr">SERVICES_APOLLO_ENGINE_ENABLED:</span> <span class="hljs-string">'false'</span>
-  <span class="hljs-attr">SERVICES_APOLLO_ENGINE_API_KEY:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  SERVICES_APOLLO_ENGINE_ENABLED:</span> <span class="hljs-string">'false'</span>
+<span class="hljs-attr">  SERVICES_APOLLO_ENGINE_API_KEY:</span> <span class="hljs-string">'xyz'</span>
 
   <span class="hljs-comment"># connection to sentry for error logging (optional)</span>
-  <span class="hljs-attr">SERVICES_SENTRY_ENABLED:</span> <span class="hljs-string">'false'</span>
-  <span class="hljs-attr">SERVICES_SENTRY_DSN:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  SERVICES_SENTRY_ENABLED:</span> <span class="hljs-string">'false'</span>
+<span class="hljs-attr">  SERVICES_SENTRY_DSN:</span> <span class="hljs-string">'xyz'</span>
 
   <span class="hljs-comment"># conenction to a slack channel for event logging (optional)</span>
-  <span class="hljs-attr">SERVICES_SLACK_ENABLED:</span> <span class="hljs-string">'false'</span>
-  <span class="hljs-attr">SERVICES_SLACK_WEBHOOK:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  SERVICES_SLACK_ENABLED:</span> <span class="hljs-string">'false'</span>
+<span class="hljs-attr">  SERVICES_SLACK_WEBHOOK:</span> <span class="hljs-string">'xyz'</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="klicker-react"></a><a href="#klicker-react" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>klicker-react</h3>
 <pre><code class="hljs css language-yaml"><span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
 <span class="hljs-attr">kind:</span> <span class="hljs-string">ConfigMap</span>
 
 <span class="hljs-attr">metadata:</span>
-  <span class="hljs-attr">name:</span> <span class="hljs-string">klicker-react-config</span>
-  <span class="hljs-attr">namespace:</span> <span class="hljs-string">klicker</span>
+<span class="hljs-attr">  name:</span> <span class="hljs-string">klicker-react-config</span>
+<span class="hljs-attr">  namespace:</span> <span class="hljs-string">klicker</span>
 
 <span class="hljs-attr">data:</span>
   <span class="hljs-comment"># the main api endpoint (over HTTP/S and Websockets)</span>
-  <span class="hljs-attr">API_ENDPOINT:</span> <span class="hljs-string">'https://api.klicker.uzh.ch/graphql'</span>
-  <span class="hljs-attr">API_ENDPOINT_WS:</span> <span class="hljs-string">'wss://api.klicker.uzh.ch/graphql'</span>
+<span class="hljs-attr">  API_ENDPOINT:</span> <span class="hljs-string">'https://api.klicker.uzh.ch/graphql'</span>
+<span class="hljs-attr">  API_ENDPOINT_WS:</span> <span class="hljs-string">'wss://api.klicker.uzh.ch/graphql'</span>
 
   <span class="hljs-comment"># the base url of the application (with protocol)</span>
-  <span class="hljs-attr">APP_BASE_URL:</span> <span class="hljs-string">'https://app.klicker.uzh.ch'</span>
+<span class="hljs-attr">  APP_BASE_URL:</span> <span class="hljs-string">'https://app.klicker.uzh.ch'</span>
 
   <span class="hljs-comment"># an alternative shortdomain (i.e. "join" url)</span>
   <span class="hljs-comment"># this domain should redirect to the main base url</span>
   <span class="hljs-comment"># i.e., uzh.voting/abc should redirect to app.klicker.uzh.ch/join/abc</span>
-  <span class="hljs-attr">APP_JOIN_URL:</span> <span class="hljs-string">'uzh.voting'</span>
+<span class="hljs-attr">  APP_JOIN_URL:</span> <span class="hljs-string">'uzh.voting'</span>
 
   <span class="hljs-comment"># whether the query contents should be persisted/cached</span>
   <span class="hljs-comment"># this optimizes performance as queries can be identified by a single ID</span>
-  <span class="hljs-attr">APP_PERSIST_QUERIES:</span> <span class="hljs-string">'true'</span>
+<span class="hljs-attr">  APP_PERSIST_QUERIES:</span> <span class="hljs-string">'true'</span>
 
   <span class="hljs-comment"># whether express should trust a forwarding proxy</span>
   <span class="hljs-comment"># needs to be set to get real client ips in a cloud environment (e.g., OpenShift)</span>
-  <span class="hljs-attr">APP_TRUST_PROXY:</span> <span class="hljs-string">'true'</span>
+<span class="hljs-attr">  APP_TRUST_PROXY:</span> <span class="hljs-string">'true'</span>
 
   <span class="hljs-comment"># settings and credentials for the redis cache service</span>
-  <span class="hljs-attr">CACHE_REDIS_PASSWORD:</span> <span class="hljs-string">'xyz'</span>
-  <span class="hljs-attr">CACHE_REDIS_ENABLED:</span> <span class="hljs-string">'true'</span>
-  <span class="hljs-attr">CACHE_REDIS_HOST:</span> <span class="hljs-string">'redis'</span>
+<span class="hljs-attr">  CACHE_REDIS_PASSWORD:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  CACHE_REDIS_ENABLED:</span> <span class="hljs-string">'true'</span>
+<span class="hljs-attr">  CACHE_REDIS_HOST:</span> <span class="hljs-string">'redis'</span>
 
   <span class="hljs-comment"># the root url of the S3 bucket</span>
   <span class="hljs-comment"># used by the frontend to display uploaded images</span>
-  <span class="hljs-attr">S3_ROOT_URL:</span> <span class="hljs-string">'https://klicker-files.s3.eu-central-1.amazonaws.com/klicker-prod'</span>
+<span class="hljs-attr">  S3_ROOT_URL:</span> <span class="hljs-string">'https://klicker-files.s3.eu-central-1.amazonaws.com/klicker-prod'</span>
 
   <span class="hljs-comment"># miscellaneous security settings</span>
-  <span class="hljs-attr">SECURITY_CSP_ENABLED:</span> <span class="hljs-string">'false'</span>
-  <span class="hljs-attr">SECURITY_CSP_REPORT_URI:</span> <span class="hljs-string">'xyz'</span>
-  <span class="hljs-attr">SECURITY_EXPECT_CT_ENABLED:</span> <span class="hljs-string">'false'</span>
-  <span class="hljs-attr">SECURITY_EXPECT_CT_REPORT_URI:</span> <span class="hljs-string">'xyz'</span>
-  <span class="hljs-attr">SECURITY_FRAMEGUARD_ENABLED:</span> <span class="hljs-string">'false'</span>
-  <span class="hljs-attr">SECURITY_HSTS_ENABLED:</span> <span class="hljs-string">'false'</span>
+<span class="hljs-attr">  SECURITY_CSP_ENABLED:</span> <span class="hljs-string">'false'</span>
+<span class="hljs-attr">  SECURITY_CSP_REPORT_URI:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  SECURITY_EXPECT_CT_ENABLED:</span> <span class="hljs-string">'false'</span>
+<span class="hljs-attr">  SECURITY_EXPECT_CT_REPORT_URI:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  SECURITY_FRAMEGUARD_ENABLED:</span> <span class="hljs-string">'false'</span>
+<span class="hljs-attr">  SECURITY_HSTS_ENABLED:</span> <span class="hljs-string">'false'</span>
 
   <span class="hljs-comment"># connection to an elastic apm service (optional)</span>
-  <span class="hljs-attr">SERVICES_APM_ENABLED:</span> <span class="hljs-string">'true'</span>
-  <span class="hljs-attr">SERVICES_APM_SECRET_TOKEN:</span> <span class="hljs-string">'xyz'</span>
-  <span class="hljs-attr">SERVICES_APM_SERVER_URL:</span> <span class="hljs-string">'xyz'</span>
-  <span class="hljs-attr">SERVICES_APM_SERVICE_NAME:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  SERVICES_APM_ENABLED:</span> <span class="hljs-string">'true'</span>
+<span class="hljs-attr">  SERVICES_APM_SECRET_TOKEN:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  SERVICES_APM_SERVER_URL:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  SERVICES_APM_SERVICE_NAME:</span> <span class="hljs-string">'xyz'</span>
 
   <span class="hljs-comment"># connection to google analytics (optional)</span>
-  <span class="hljs-attr">SERVICES_GOOGLE_ANALYTICS_ENABLED:</span> <span class="hljs-string">'true'</span>
-  <span class="hljs-attr">SERVICES_GOOGLE_ANALYTICS_TRACKING_ID:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  SERVICES_GOOGLE_ANALYTICS_ENABLED:</span> <span class="hljs-string">'true'</span>
+<span class="hljs-attr">  SERVICES_GOOGLE_ANALYTICS_TRACKING_ID:</span> <span class="hljs-string">'xyz'</span>
 
   <span class="hljs-comment"># connection to logrocket (optional)</span>
-  <span class="hljs-attr">SERVICES_LOGROCKET_ENABLED:</span> <span class="hljs-string">'true'</span>
-  <span class="hljs-attr">SERVICES_LOGROCKET_APP_ID:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  SERVICES_LOGROCKET_ENABLED:</span> <span class="hljs-string">'true'</span>
+<span class="hljs-attr">  SERVICES_LOGROCKET_APP_ID:</span> <span class="hljs-string">'xyz'</span>
 
   <span class="hljs-comment"># connection to slaask (optional)</span>
-  <span class="hljs-attr">SERVICES_SLAASK_ENABLED:</span> <span class="hljs-string">'true'</span>
-  <span class="hljs-attr">SERVICES_SLAASK_WIDGET_KEY:</span> <span class="hljs-string">'xyz'</span>
+<span class="hljs-attr">  SERVICES_SLAASK_ENABLED:</span> <span class="hljs-string">'true'</span>
+<span class="hljs-attr">  SERVICES_SLAASK_WIDGET_KEY:</span> <span class="hljs-string">'xyz'</span>
 </code></pre>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/klicker-uzh/docs/deployment/deployment_requirements"><span class="arrow-prev">← </span><span>Requirements</span></a><a class="docs-next button" href="/klicker-uzh/docs/contributing/contributing_guidelines"><span>Contributing Guidelines</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#deployment-with-docker-compose">Deployment with Docker Compose</a></li><li><a href="#deployment-to-kubernetes">Deployment to Kubernetes</a></li><li><a href="#configuration">Configuration</a><ul class="toc-headings"><li><a href="#klicker-api">klicker-api</a></li><li><a href="#klicker-react">klicker-react</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright"><span>Copyright 2020 @ Teaching Center, Department of Banking and Finance, University of Zurich. All rights reserved.<br/></span><span>Products and Services displayed herein are trademarks or registered trademarks of their respective owners.<br/></span></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
