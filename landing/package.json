@@ -4,7 +4,7 @@
     "yarn": "YARN NO LONGER USED - use npm instead."
   },
   "dependencies": {
-    "axios": "^0.19.1",
+    "axios": "^0.19.2",
     "gatsby": "2.24.23",
     "gatsby-plugin-matomo": "0.7.2",
     "gatsby-plugin-react-helmet": "3.3.10",
