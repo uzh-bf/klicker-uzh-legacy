@@ -112,21 +112,24 @@ export default function Index() {
       <Slider>
         <Slider.Item
           title={<KlickerUZH />}
-          // description="The question pool allows you to organize all of your questions"
+          description="The question pool enables lecturers to manage all of their past and future questions in one place."
           imageSrc={questionPoolMacPNG}
         >
           <Buttons />
         </Slider.Item>
         <Slider.Item
           title={<KlickerUZH />}
-          // description="Now released in version 2.0"
+          description="The dedicated evaluation screen offers a clean presentation of the results."
           imageSrc={evaluationMacPNG}
         >
           <Buttons />
         </Slider.Item>
-        <Slider.Item>
+        <Slider.Item
           title={<KlickerUZH />}
+          description="The running session cockpit guides through the previously created sessions."
           imageSrc={runningSessionMacPNG}
+        >
+          <Buttons />
         </Slider.Item>
         {/* <Slider.Embed>
         <Embed
