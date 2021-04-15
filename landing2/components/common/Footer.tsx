@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Grid, List } from 'semantic-ui-react'
 import { Element } from 'react-scroll'
-import { Link } from 'next/link'
+import Link from 'next/link'
 
 import KlickerUZH from './KlickerUZH'
 
@@ -46,11 +46,11 @@ function Footer() {
             <Grid.Column>
               <List>
                 <List.Item>
-                  <Link to="/tos">Terms of Service</Link>
+                  <Link href="/tos">Terms of Service</Link>
                 </List.Item>
 
                 <List.Item>
-                  <Link to="/privacy">Privacy Policy</Link>
+                  <Link href="/privacy">Privacy Policy</Link>
                 </List.Item>
               </List>
             </Grid.Column>

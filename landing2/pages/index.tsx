@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Head from 'next/head'
 import { Button, Grid, Image, List, Message } from 'semantic-ui-react'
 import axios from 'axios'
 
@@ -31,22 +30,25 @@ async function pingKlickerEndpoint({
 }
 
 function Buttons() {
-  return [
-    <a
-      href="https://uzh-bf.github.io/klicker-uzh/docs/introduction/getting_started"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Button primary>Get Started</Button>
-    </a>,
-    <a
-      href="https://app.klicker.uzh.ch/user/login"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Button primary>Login</Button>
-    </a>,
-  ]
+  return (
+    <>
+      <a
+        href="https://uzh-bf.github.io/klicker-uzh/docs/introduction/getting_started"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Button primary>Get Started</Button>
+      </a>
+      <a
+        href="https://app.klicker.uzh.ch/user/login"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Button primary>Login</Button>
+      </a>
+      ,
+    </>
+  )
 }
 
 export default function Index() {
@@ -77,16 +79,6 @@ export default function Index() {
 
   return (
     <Layout>
-      <Head>
-        <title>KlickerUZH</title>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-      </Head>
-
       {isAppAvailable === false && (
         <Message error>
           The Klicker is unavailable at the moment. We are trying to fix the

@@ -10,10 +10,12 @@ function Layout({ children }) {
   return (
     <div className="klicker-main">
       <Head>
-        <meta charset="utf-8" />
+        <title>KlickerUZH</title>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
       </Head>
 

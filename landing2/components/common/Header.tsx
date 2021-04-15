@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Container, Menu } from 'semantic-ui-react'
 import { Link as ScrollLink } from 'react-scroll'
-import { Link } from 'next/link'
+import Link from 'next/link'
 
 import KlickerUZH from './KlickerUZH'
 
@@ -11,13 +11,13 @@ function Header() {
       <Container>
         <div className="klicker-headerContent">
           <div className="klicker-logo">
-            <Link to="/">
+            <Link href="/">
               <KlickerUZH />
             </Link>
           </div>
 
           <Menu text as="nav">
-            <Menu.Item as={Link} to="/" name="home">
+            <Menu.Item as={Link} href="/" name="home">
               Home
             </Menu.Item>
 
