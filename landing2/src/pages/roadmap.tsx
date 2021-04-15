@@ -1,5 +1,6 @@
+import Link from 'next/link'
 import React from 'react'
-import { Card, Container, Input, Label, Image } from 'semantic-ui-react'
+import { Card, Container, Input, Label, Image, Icon } from 'semantic-ui-react'
 
 export default function Roadmap() {
   return (
@@ -22,8 +23,13 @@ export default function Roadmap() {
           <Card.Content header="Participant Authentication" />
           <Image src="https://place-hold.it/300x100" />
           <Card.Content>Lorem</Card.Content>
-          <Card.Content extra>
+          <Card.Content extra className="flex items-center justify-between">
             <Label color="green">Released</Label>
+            <Link href="https://uzh-bf.github.io/klicker-uzh/docs/advanced/participant_authentication">
+              <a target="_blank">
+                <Icon name="info circle" /> Documentation
+              </a>
+            </Link>
           </Card.Content>
         </Card>
         <Card>
@@ -32,6 +38,7 @@ export default function Roadmap() {
           <Card.Content>Lorem</Card.Content>
           <Card.Content extra>
             <Label color="olive">Working On</Label>
+            <Label>Fall 21</Label>
           </Card.Content>
         </Card>
       </Card.Group>
@@ -56,6 +63,7 @@ export default function Roadmap() {
           <Card.Content>Lorem</Card.Content>
           <Card.Content extra>
             <Label color="grey">Planned</Label>
+            <Label>Spring 22</Label>
           </Card.Content>
         </Card>
         <Card>
@@ -64,6 +72,7 @@ export default function Roadmap() {
           <Card.Content>Lorem</Card.Content>
           <Card.Content extra>
             <Label color="grey">Planned</Label>
+            <Label>Spring 22</Label>
           </Card.Content>
         </Card>
         <Card>
@@ -72,6 +81,7 @@ export default function Roadmap() {
           <Card.Content>Lorem</Card.Content>
           <Card.Content extra>
             <Label color="grey">Planned</Label>
+            <Label>Fall 22</Label>
           </Card.Content>
         </Card>
       </Card.Group>
