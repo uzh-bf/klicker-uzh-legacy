@@ -10,7 +10,6 @@ import FeatureOverview from '../components/section/FeatureOverview'
 async function pingKlickerEndpoint({
   serviceName,
   callback,
-  accept,
   path = '',
   method = 'get',
 }) {
@@ -19,8 +18,7 @@ async function pingKlickerEndpoint({
       method,
       url: `https://${serviceName}.klicker.uzh.ch${path}`,
       timeout: 1500,
-      accept,
-    })
+    } as any)
     callback(true)
   } catch (error) {
     console.log(error)
