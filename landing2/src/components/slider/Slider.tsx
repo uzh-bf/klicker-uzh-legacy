@@ -30,7 +30,7 @@ Slider.Item = function SliderItem({ title, description, imageSrc, children }) {
       <Grid stackable reversed="mobile">
         <Grid.Column width={1} />
         <Grid.Column verticalAlign="middle" width={5}>
-          <h2>{title}</h2>
+          <h2 className="mb-4">{title}</h2>
           <p className="text-[#375164]">{description}</p>
           <div className="mt-4">{children}</div>
         </Grid.Column>

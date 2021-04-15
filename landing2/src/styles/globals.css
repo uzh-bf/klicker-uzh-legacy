@@ -12,4 +12,11 @@ h2,
 h3,
 h4 {
   color: #375164;
+  font-weight: bold;
+}
+
+@layer base {
+  a {
+    @apply text-blue-400;
+  }
 }

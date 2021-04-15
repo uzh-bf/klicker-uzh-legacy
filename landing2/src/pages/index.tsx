@@ -43,7 +43,6 @@ function Buttons() {
       >
         <Button primary>Login</Button>
       </a>
-      ,
     </>
   )
 }
