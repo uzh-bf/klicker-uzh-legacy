@@ -7,10 +7,10 @@ import KlickerUZH from './KlickerUZH'
 
 function Header() {
   return (
-    <header>
+    <header className="bg-white">
       <Container>
-        <div className="klicker-headerContent">
-          <div className="klicker-logo">
+        <div className="flex flex-col items-center justify-between lg:flex-row">
+          <div className="mt-4 lg:my-1 lg:w-52">
             <Link href="/">
               <KlickerUZH />
             </Link>
@@ -56,39 +56,6 @@ function Header() {
           </Menu>
         </div>
       </Container>
-
-      <style jsx>{`
-        header {
-          background-color: white;
-        }
-
-        .klicker-headerContent {
-          display: flex;
-          flex-direction: column;
-
-          align-items: center;
-          justify-content: space-between;
-        }
-
-        .klicker-logo {
-          margin-top: 1rem;
-        }
-
-        :global(a.item) {
-          color: blue;
-        }
-
-        @media all and (min-width: 986px) {
-          .klicker-headerContent {
-            flex-direction: row;
-          }
-
-          .klicker-logo {
-            flex: 0 0 200px;
-            margin: 0.25rem 0;
-          }
-        }
-      `}</style>
     </header>
   )
 }

@@ -2,23 +2,24 @@ import React from 'react'
 
 function KlickerUZH({ color, fontSize }) {
   return (
-    <span className="logo">
+    <span
+      className="font-bold"
+      style={{
+        color,
+        fontSize: `${fontSize}rem`,
+        lineHeight: `${fontSize}rem`,
+      }}
+    >
       Klicker
-      <span className="high">UZH</span>
-      <style jsx>{`
-        .logo {
-          color: ${color};
-          font-size: ${fontSize}rem;
-          font-weight: bold;
-          line-height: ${fontSize}rem;
-        }
-
-        .logo > .high {
-          font-size: ${fontSize / 2}rem;
-          line-height: ${fontSize / 2}rem;
-          vertical-align: top;
-        }
-      `}</style>
+      <span
+        className="align-top"
+        style={{
+          fontSize: `${fontSize / 2}rem`,
+          lineHeight: `${fontSize / 2}rem`,
+        }}
+      >
+        UZH
+      </span>
     </span>
   )
 }

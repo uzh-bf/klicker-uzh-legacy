@@ -79,30 +79,32 @@ export default function Index() {
   return (
     <div>
       {isAppAvailable === false && (
-        <Message error>
-          The Klicker is unavailable at the moment. We are trying to fix the
-          problem as quickly as possible. <br />
-          You can get updates on our{' '}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://uptime.statuscake.com/?TestID=AEHThYQ2ig"
-          >
-            status page
-          </a>
-          . Please excuse the inconvenience and try again later.
-          <Message.List>
-            <Message.Item>
-              Frontend - {isAppAvailable ? 'UP' : 'DOWN'}
-            </Message.Item>
-            {/* <Message.Item>
+        <div className="max-w-3xl m-auto mb-4">
+          <Message error>
+            The Klicker is unavailable at the moment. We are trying to fix the
+            problem as quickly as possible. <br />
+            You can get updates on our{' '}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://uptime.statuscake.com/?TestID=AEHThYQ2ig"
+            >
+              status page
+            </a>
+            . Please excuse the inconvenience and try again later.
+            <Message.List>
+              <Message.Item>
+                Frontend - {isAppAvailable ? 'UP' : 'DOWN'}
+              </Message.Item>
+              {/* <Message.Item>
               Backend - {isApiAvailable ? 'UP' : 'DOWN'}
             </Message.Item> */}
-            {/* <Message.Item>
+              {/* <Message.Item>
                 AAI - {isAaiAvailable ? 'UP' : 'DOWN'}
               </Message.Item> */}
-          </Message.List>
-        </Message>
+            </Message.List>
+          </Message>
+        </div>
       )}
 
       <Slider>
@@ -136,7 +138,7 @@ export default function Index() {
       </Slider.Embed> */}
       </Slider>
 
-      <div className="sections">
+      <div className="py-4 px-[10%]">
         <Section>
           <Grid stackable>
             <Grid.Row>
@@ -239,18 +241,6 @@ export default function Index() {
           </Grid>
         </Section>
       </div>
-
-      <style jsx>{`
-        .sections {
-          padding: 1rem 10%;
-        }
-
-        :global(.message.error) {
-          margin: auto;
-          max-width: 45rem;
-          margin-bottom: 1rem;
-        }
-      `}</style>
     </div>
   )
 }

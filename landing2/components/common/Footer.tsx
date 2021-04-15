@@ -7,70 +7,52 @@ import KlickerUZH from './KlickerUZH'
 
 function Footer() {
   return (
-    <footer>
-      <Container>
-        <Grid columns={2}>
-          <Grid.Row>
-            <Grid.Column>
-              <strong>
-                <KlickerUZH color="white" fontSize={1.2} />
-              </strong>
+    <footer className="text-white bg-[#375164] p-8">
+      <Grid columns={2} stackable>
+        <Grid.Row>
+          <Grid.Column>
+            <strong>
+              <KlickerUZH color="white" fontSize={1.2} />
+            </strong>
 
-              <p>
-                Created by the{' '}
-                <a href="https://www.bf.uzh.ch/de/studies/general/teaching-center.html">
-                  Teaching Center
-                </a>{' '}
-                at the Department of Banking and Finance, University of Zurich.
-              </p>
-
-              <p>
-                Contact us via{' '}
-                <a href="mailto:klicker.support@uzh.ch">
-                  klicker.support@uzh.ch
-                </a>
-              </p>
-
-              <address>
+            <p>
+              Created by the{' '}
+              <a href="https://www.bf.uzh.ch/de/studies/general/teaching-center.html">
                 Teaching Center
-                <br />
-                Department of Banking and Finance
-                <br />
-                Plattenstrasse 14
-                <br />
-                8032 Zurich
-              </address>
+              </a>{' '}
+              at the Department of Banking and Finance, University of Zurich.
+            </p>
 
-              <Element name="footer" />
-            </Grid.Column>
-            <Grid.Column>
-              <List>
-                <List.Item>
-                  <Link href="/tos">Terms of Service</Link>
-                </List.Item>
+            <p>
+              Contact us via{' '}
+              <a href="mailto:klicker.support@uzh.ch">klicker.support@uzh.ch</a>
+            </p>
 
-                <List.Item>
-                  <Link href="/privacy">Privacy Policy</Link>
-                </List.Item>
-              </List>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Container>
+            <address>
+              Teaching Center
+              <br />
+              Department of Banking and Finance
+              <br />
+              Plattenstrasse 14
+              <br />
+              8032 Zurich
+            </address>
 
-      <style jsx>{`
-        footer {
-          background-color: #375164;
-          color: white;
-          height: 15rem;
-          padding: 1rem;
-        }
+            <Element name="footer" />
+          </Grid.Column>
+          <Grid.Column>
+            <List>
+              <List.Item>
+                <Link href="/tos">Terms of Service</Link>
+              </List.Item>
 
-        footer a,
-        footer a.item {
-          color: white !important;
-        }
-      `}</style>
+              <List.Item>
+                <Link href="/privacy">Privacy Policy</Link>
+              </List.Item>
+            </List>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
     </footer>
   )
 }
