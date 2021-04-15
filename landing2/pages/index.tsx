@@ -3,7 +3,6 @@ import { Button, Grid, Image, List, Message } from 'semantic-ui-react'
 import axios from 'axios'
 
 import KlickerUZH from '../components/common/KlickerUZH'
-import Layout from '../components/layouts/Layout'
 import Slider from '../components/slider/Slider'
 import Section from '../components/section/Section'
 import FeatureOverview from '../components/section/FeatureOverview'
@@ -78,7 +77,7 @@ export default function Index() {
   }, [])
 
   return (
-    <Layout>
+    <div>
       {isAppAvailable === false && (
         <Message error>
           The Klicker is unavailable at the moment. We are trying to fix the
@@ -252,6 +251,6 @@ export default function Index() {
           margin-bottom: 1rem;
         }
       `}</style>
-    </Layout>
+    </div>
   )
 }

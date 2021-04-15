@@ -1,11 +1,9 @@
 import React from 'react'
 import { Container } from 'semantic-ui-react'
 
-import Layout from '../components/layouts/Layout'
-
 function TOS() {
   return (
-    <Layout>
+    <div>
       <Container>
         <div className="terms">
           <h1>Terms of Service</h1>
@@ -85,7 +83,7 @@ function TOS() {
           padding: 1rem 0;
         }
       `}</style>
-    </Layout>
+    </div>
   )
 }
 

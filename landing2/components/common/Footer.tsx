@@ -36,7 +36,7 @@ function Footer() {
                 <br />
                 Department of Banking and Finance
                 <br />
-                Plattenstrasse 32
+                Plattenstrasse 14
                 <br />
                 8032 Zurich
               </address>

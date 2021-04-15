@@ -1,11 +1,9 @@
 import React from 'react'
 import { Container } from 'semantic-ui-react'
 
-import Layout from '../components/layouts/Layout'
-
 function Privacy() {
   return (
-    <Layout>
+    <div>
       <Container>
         <div className="privacy">
           <h1>Privacy Policy</h1>
@@ -298,7 +296,7 @@ function Privacy() {
           padding: 1rem 0;
         }
       `}</style>
-    </Layout>
+    </div>
   )
 }
 
