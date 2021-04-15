@@ -5,6 +5,7 @@
    # redirect SPA routes to the index.html file
    RewriteRule    ^/tos$ index.html      [L]
    RewriteRule    ^/privacy$ index.html  [L]
+   RewriteRule    ^/roadmap$ index.html  [L]
 
    # redirect everything else to the new klicker
    # except needed assets and routes of the landing SPA
