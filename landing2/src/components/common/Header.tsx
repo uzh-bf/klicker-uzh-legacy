@@ -17,29 +17,26 @@ function Header() {
           </div>
 
           <Menu text as="nav">
-            <Menu.Item as={Link} href="/" name="home">
-              Home
+            <Menu.Item>
+              <Link href="/">Home</Link>
             </Menu.Item>
 
-            <Menu.Item
-              name="faq"
-              as="a"
-              href="https://uzh-bf.github.io/klicker-uzh/docs/faq/faq"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              FAQ
+            <Menu.Item>
+              <Link href="/roadmap">Roadmap</Link>
             </Menu.Item>
 
-            <Menu.Item
-              as={ScrollLink}
-              to="footer"
-              smooth
-              duration={500}
-              offset={-50}
-              name="contact"
-            >
-              Contact Us
+            <Menu.Item>
+              <Link href="https://uzh-bf.github.io/klicker-uzh/docs/faq/faq">
+                <a target="_blank" rel="noopener noreferrer">
+                  FAQ
+                </a>
+              </Link>
+            </Menu.Item>
+
+            <Menu.Item>
+              <ScrollLink to="footer" smooth duration={500} offset={-50}>
+                <a className="cursor-pointer">Contact Us</a>
+              </ScrollLink>
             </Menu.Item>
 
             <Menu.Item>
