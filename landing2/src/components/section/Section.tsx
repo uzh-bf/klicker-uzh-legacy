@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Icon, Image, Segment } from 'semantic-ui-react'
 
-function Section({ title, children }) {
+function Section({ title, children }: { title?: string; children: any }) {
   return (
     <div className="py-8 border-t border-gray-200">
       <Container>
