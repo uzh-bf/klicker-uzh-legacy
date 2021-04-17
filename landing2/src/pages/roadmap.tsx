@@ -1,99 +1,158 @@
 import Link from 'next/link'
 import React from 'react'
-import { Card, Container, Input, Label, Image, Icon } from 'semantic-ui-react'
+import {
+  Card,
+  Container,
+  Input,
+  Label,
+  Image,
+  Icon,
+  Button,
+  Form,
+} from 'semantic-ui-react'
+
+enum Status {
+  RELEASED,
+  WORKING_ON,
+  PLANNED,
+}
+
+const StatusColor = {
+  [Status.RELEASED]: 'green',
+  [Status.WORKING_ON]: 'olive',
+  [Status.PLANNED]: 'grey',
+}
+
+const StatusText = {
+  [Status.RELEASED]: 'Released',
+  [Status.WORKING_ON]: 'Working On',
+  [Status.PLANNED]: 'Planned',
+}
+
+interface RoadmapItemProps {
+  title: string
+  description: string
+  status: Status
+  children: any
+}
+
+function RoadmapItem({
+  title,
+  description,
+  status,
+  children,
+}: RoadmapItemProps) {
+  return (
+    <Card color={StatusColor[status]}>
+      <Card.Content header={title} />
+      {/* <Image src="https://place-hold.it/300x100" /> */}
+      <Card.Content>{description}</Card.Content>
+      <Card.Content extra className="flex items-center">
+        <Label color={StatusColor[status]}>{StatusText[status]}</Label>
+        {children}
+      </Card.Content>
+    </Card>
+  )
+}
 
 export default function Roadmap() {
   return (
     <Container className="pt-4 pb-16">
       <h1>Roadmap</h1>
-      <Image fluid src="https://place-hold.it/1300x200" />
+      <Image bordered fluid src="/img/whiteboard.png" />
 
-      <h2 className="pt-8">2020-2021</h2>
-      <p className="pb-2">
+      <h2 className="pt-4">Current Focus Areas</h2>
+      <p className="pb-4 prose prose-lg max-w-none">
         The current development focus of the KlickerUZH is centered around
         stability and integrity of the voting performed on the platform. As part
         of a project sponsored by the Faculty of Business, Economics and
         Informatics, we have released authentication capabilities for KlickerUZH
         sessions. Furthermore, we are cooperating with the UZH Central IT to get
-        the platform running on Microsoft Azure, allowing for significant
+        the KlickerUZH running on Microsoft Azure, allowing for significant
         performance and stability improvements.
       </p>
+
       <Card.Group>
-        <Card>
-          <Card.Content header="Participant Authentication" />
-          <Image src="https://place-hold.it/300x100" />
-          <Card.Content>Lorem</Card.Content>
-          <Card.Content extra className="flex items-center justify-between">
-            <Label color="green">Released</Label>
-            <Link href="https://uzh-bf.github.io/klicker-uzh/docs/advanced/participant_authentication">
-              <a target="_blank">
-                <Icon name="info circle" /> Documentation
-              </a>
-            </Link>
-          </Card.Content>
-        </Card>
-        <Card>
-          <Card.Content header="Scalability and Performance" />
-          <Image src="https://place-hold.it/300x100" />
-          <Card.Content>Lorem</Card.Content>
-          <Card.Content extra>
-            <Label color="olive">Working On</Label>
-            <Label>Fall 21</Label>
-          </Card.Content>
-        </Card>
+        <RoadmapItem
+          title="Participant Authentication"
+          description="Restrict access to your KlickerUZH sessions by defining a list of authorized participants (AAI or username/password)."
+          status={Status.RELEASED}
+        >
+          <Link href="https://uzh-bf.github.io/klicker-uzh/docs/advanced/participant_authentication">
+            <a className="ml-4" target="_blank">
+              <Icon name="info circle" /> Documentation
+            </a>
+          </Link>
+        </RoadmapItem>
+
+        <RoadmapItem
+          title="Scalability and Performance"
+          description="Deployment to the Microsoft Azure cloud allows us to optimize the KlickerUZH for scalability and performance."
+          status={Status.WORKING_ON}
+        >
+          <Label>Fall 21</Label>
+        </RoadmapItem>
       </Card.Group>
 
-      <h2 className="mt-16">2021-2023</h2>
-      <p className="pb-2">
+      <h2 className="mt-16">Future Focus Areas</h2>
+
+      <h3>2021-2023</h3>
+      <p className="pb-4 prose prose-lg max-w-none">
         As part of a project backed by the University of Zurich and
         swissuniversities, the KlickerUZH team will be working on several
         interesting focus areas over the coming years. We will be developing
         best practices and materials, as well as extending the KlickerUZH with
         capabilities that support each of these areas.
       </p>
-      <div className="flex">
-        <Image className="w-48 mr-8" src="/img/logo_swissuniversities.png" />
+      <div className="flex pb-4">
+        <Image className="w-48 mr-16" src="/img/logo_swissuniversities.png" />
         <Image className="w-48" src="/img/logo_uzh.jpeg" />
       </div>
 
       <Card.Group>
-        <Card>
-          <Card.Content header="Gamification and Engagement" />
-          <Image src="https://place-hold.it/300x100" />
-          <Card.Content>Lorem</Card.Content>
-          <Card.Content extra>
-            <Label color="grey">Planned</Label>
-            <Label>Spring 22</Label>
-          </Card.Content>
-        </Card>
-        <Card>
-          <Card.Content header="Interaction" />
-          <Image src="https://place-hold.it/300x100" />
-          <Card.Content>Lorem</Card.Content>
-          <Card.Content extra>
-            <Label color="grey">Planned</Label>
-            <Label>Spring 22</Label>
-          </Card.Content>
-        </Card>
-        <Card>
-          <Card.Content header="In-Depth Analysis" />
-          <Image src="https://place-hold.it/300x100" />
-          <Card.Content>Lorem</Card.Content>
-          <Card.Content extra>
-            <Label color="grey">Planned</Label>
-            <Label>Fall 22</Label>
-          </Card.Content>
-        </Card>
+        <RoadmapItem
+          title="Gamification and Engagement"
+          description="The incorporation of gamified interactions allows lecturers to increase engagement in their (virtual) classrooms."
+          status={Status.PLANNED}
+        >
+          <Label>Spring 22</Label>
+        </RoadmapItem>
+
+        <RoadmapItem
+          title="Interaction"
+          description="New interaction modalities for virtual and physical classrooms improve interaction between lecturers and participants."
+          status={Status.PLANNED}
+        >
+          <Label>Spring 22</Label>
+        </RoadmapItem>
+
+        <RoadmapItem
+          title="In-Depth Analysis"
+          description="Analysis functionalities allow lecturers to evaluate their sessions and questions in terms of different quality dimensions."
+          status={Status.PLANNED}
+        >
+          <Label>Fall 22</Label>
+        </RoadmapItem>
       </Card.Group>
 
       <h2 className="mt-16">Get Involved</h2>
-      <p>
-        We strive to center our roadmap and goals around the needs of our users.
-        If you would like to be involved in the development, we welcome you to
-        join our new KlickerUZH user group. ...
+      <p className="prose prose-lg max-w-none">
+        We strive to develop our roadmap and goals based on the needs of our
+        users. If you are interested in classroom interaction and would like to
+        be involved in future developments, we welcome you to join our new
+        KlickerUZH user group with the following form.
       </p>
-      <Input />
-      <p>Join MS teams...</p>
+      <div className="max-w-lg">
+        <Form>
+          <Form.Field>
+            <Input placeholder="Name" />
+          </Form.Field>
+          <Form.Field>
+            <Input placeholder="Email" />
+          </Form.Field>
+          <Button>Submit</Button>
+        </Form>
+      </div>
     </Container>
   )
 }
