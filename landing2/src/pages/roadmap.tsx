@@ -43,12 +43,12 @@ function RoadmapItem({
   children,
 }: RoadmapItemProps) {
   return (
-    <Card color={StatusColor[status]}>
+    <Card color={StatusColor[status] as any}>
       <Card.Content header={title} />
       {/* <Image src="https://place-hold.it/300x100" /> */}
       <Card.Content>{description}</Card.Content>
       <Card.Content extra className="flex items-center">
-        <Label color={StatusColor[status]}>{StatusText[status]}</Label>
+        <Label color={StatusColor[status] as any}>{StatusText[status]}</Label>
         {children}
       </Card.Content>
     </Card>
