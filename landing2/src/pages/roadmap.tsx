@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   Card,
   Container,
@@ -56,6 +56,9 @@ function RoadmapItem({
 }
 
 export default function Roadmap() {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+
   return (
     <Container className="pt-4 pb-16">
       <h1>Roadmap</h1>
@@ -145,12 +148,27 @@ export default function Roadmap() {
       <div className="max-w-lg">
         <Form>
           <Form.Field>
-            <Input placeholder="Name" />
+            <Input
+              placeholder="Name"
+              value={name}
+              onChange={(_, { value }) => setName(value)}
+            />
           </Form.Field>
           <Form.Field>
-            <Input placeholder="Email" />
+            <Input
+              placeholder="Email"
+              value={email}
+              onChange={(_, { value }) => setEmail(value)}
+            />
           </Form.Field>
-          <Button>Submit</Button>
+          <Button
+            onClick={() => {
+              setName('')
+              setEmail('')
+            }}
+          >
+            Submit
+          </Button>
         </Form>
       </div>
     </Container>
