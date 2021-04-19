@@ -197,13 +197,13 @@ export default function Roadmap() {
       </Card.Group>
 
       <h2 className="mt-16">Get Involved</h2>
-      <p className="mb-8 prose prose-lg max-w-none">
+      <p className="mb-4 prose prose-lg max-w-none">
         We strive to develop our roadmap and goals based on the needs of our
         users. If you are interested in classroom interaction and would like to
         be involved in future developments, we welcome you to join our new
         KlickerUZH user group with the following form.
       </p>
-      <div className="max-w-lg">
+      <div className="max-w-lg border">
         <div id="c7">
           Ausfüllen{' '}
           <a href="https://www.bf-tools.uzh.ch/applications/easyforms/index.php?r=app%2Fform&id=7">
