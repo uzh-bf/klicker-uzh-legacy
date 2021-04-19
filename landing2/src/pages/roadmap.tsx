@@ -62,10 +62,12 @@ export default function Roadmap() {
   return (
     <Container className="pt-4 pb-16">
       <h1>Roadmap</h1>
-      <Image bordered fluid src="/img/whiteboard.png" />
+      <div className="mb-8">
+        <Image bordered fluid src="/img/whiteboard.png" />
+      </div>
 
       <h2 className="pt-4">Current Focus Areas</h2>
-      <p className="pb-4 prose prose-lg max-w-none">
+      <p className="mb-8 prose prose-lg max-w-none">
         The current development focus of the KlickerUZH is centered around
         stability and integrity of the voting performed on the platform. As part
         of a project sponsored by the Faculty of Business, Economics and
@@ -100,7 +102,7 @@ export default function Roadmap() {
       <h2 className="mt-16">Future Focus Areas</h2>
 
       <h3>2021-2023</h3>
-      <p className="pb-4 prose prose-lg max-w-none">
+      <p className="mb-8 prose prose-lg max-w-none">
         As part of a project backed by the University of Zurich and
         swissuniversities, the KlickerUZH team will be working on several
         interesting focus areas over the coming years. We will be developing
@@ -139,7 +141,7 @@ export default function Roadmap() {
       </Card.Group>
 
       <h2 className="mt-16">Get Involved</h2>
-      <p className="prose prose-lg max-w-none">
+      <p className="mb-8 prose prose-lg max-w-none">
         We strive to develop our roadmap and goals based on the needs of our
         users. If you are interested in classroom interaction and would like to
         be involved in future developments, we welcome you to join our new
