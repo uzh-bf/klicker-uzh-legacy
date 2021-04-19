@@ -42,7 +42,7 @@ function Footer() {
           </Grid.Column>
           <Grid.Column>
             <List>
-              <List.Item>
+              <List.Item className="text-white">
                 <Link href="/tos">Terms of Service</Link>
               </List.Item>
 

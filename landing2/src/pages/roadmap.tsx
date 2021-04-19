@@ -30,6 +30,7 @@ const StatusText = {
 }
 
 interface RoadmapItemProps {
+  fluid?: boolean
   title: string
   description: string
   status: Status
@@ -37,13 +38,14 @@ interface RoadmapItemProps {
 }
 
 function RoadmapItem({
+  fluid,
   title,
   description,
   status,
   children,
 }: RoadmapItemProps) {
   return (
-    <Card color={StatusColor[status] as any}>
+    <Card fluid={fluid} color={StatusColor[status] as any}>
       <Card.Content header={title} />
       {/* <Image src="https://place-hold.it/300x100" /> */}
       <Card.Content>{description}</Card.Content>
@@ -56,8 +58,30 @@ function RoadmapItem({
 }
 
 export default function Roadmap() {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
+  useEffect(() => {
+    var s: any = document.createElement('script'),
+      options = {
+        id: 7,
+        theme: 0,
+        container: 'c7',
+        height: '479px',
+        form:
+          '//www.bf-tools.uzh.ch/applications/easyforms/index.php?r=app%2Fembed',
+      }
+    s.type = 'text/javascript'
+    s.src =
+      'https://www.bf-tools.uzh.ch/applications/easyforms/static_files/js/form.widget.js'
+    s.onload = s.onreadystatechange = function () {
+      var rs = this.readyState
+      if (rs) if (rs != 'complete') if (rs != 'loaded') return
+      try {
+        new window.EasyForms().initialize(options).display()
+      } catch (e) {}
+    }
+    var scr = document.getElementsByTagName('script')[0],
+      par = scr.parentNode
+    par.insertBefore(s, scr)
+  })
 
   return (
     <Container className="pt-4 pb-16">
@@ -77,27 +101,56 @@ export default function Roadmap() {
         performance and stability improvements.
       </p>
 
-      <Card.Group>
-        <RoadmapItem
-          title="Participant Authentication"
-          description="Restrict access to your KlickerUZH sessions by defining a list of authorized participants (AAI or username/password)."
-          status={Status.RELEASED}
-        >
-          <Link href="https://uzh-bf.github.io/klicker-uzh/docs/advanced/participant_authentication">
-            <a className="ml-4" target="_blank">
-              <Icon name="info circle" /> Documentation
-            </a>
-          </Link>
-        </RoadmapItem>
+      <div className="max-w-3xl">
+        <div className="mb-4">
+          <Card fluid color="green">
+            <Card.Content header="Participant Authentication" />
+            {/* <Image src="https://place-hold.it/300x100" /> */}
+            <Card.Content>
+              <p>
+                Restrict access to your KlickerUZH sessions by defining a list
+                of authorized participants. After logging in using AAI or a
+                username and password, authorized participants can vote on
+                active polls exactly once.
+              </p>
+              <p>
+                <span className="font-bold">Access Control</span>: restrict the
+                vote to participants of a seminar or lecture by uploading your
+                participant list. This ensures that no one else can cast a vote
+                or influence the voting with malicious intent
+              </p>
+              <p>
+                <span className="font-bold">Secret Voting</span>: besides
+                restricting access, authenticated sessions also ensure that each
+                participant can vote exactly once, as well as that nobody can
+                view the specific vote of a participant. This makes the
+                functionalitiy suitable for secret votes in committees or
+                assemblies.
+              </p>
+            </Card.Content>
 
-        <RoadmapItem
-          title="Scalability and Performance"
-          description="Deployment to the Microsoft Azure cloud allows us to optimize the KlickerUZH for scalability and performance."
-          status={Status.WORKING_ON}
-        >
-          <Label>Fall 21</Label>
-        </RoadmapItem>
-      </Card.Group>
+            <Card.Content extra className="flex items-center">
+              <Label color="green">Released</Label>
+              <Link href="https://uzh-bf.github.io/klicker-uzh/docs/advanced/participant_authentication">
+                <a className="ml-4" target="_blank">
+                  <Icon name="info circle" /> Usage Instructions
+                </a>
+              </Link>
+            </Card.Content>
+          </Card>
+        </div>
+
+        <div>
+          <RoadmapItem
+            fluid
+            title="Scalability and Performance"
+            description="Deployment to the Microsoft Azure cloud allows us to optimize the KlickerUZH for scalability and performance. Technical resources for automated deployment to the Azure platform will be provided as part of the open-source release."
+            status={Status.WORKING_ON}
+          >
+            <Label>Fall 21</Label>
+          </RoadmapItem>
+        </div>
+      </div>
 
       <h2 className="mt-16">Future Focus Areas</h2>
 
@@ -109,9 +162,12 @@ export default function Roadmap() {
         best practices and materials, as well as extending the KlickerUZH with
         capabilities that support each of these areas.
       </p>
-      <div className="flex pb-4">
-        <Image className="w-48 mr-16" src="/img/logo_swissuniversities.png" />
-        <Image className="w-48" src="/img/logo_uzh.jpeg" />
+      <div className="flex mb-8">
+        <Image
+          className="w-auto h-16 mr-16"
+          src="/img/logo_swissuniversities.png"
+        />
+        <Image className="w-auto h-16" src="/img/logo_uzh.jpeg" />
       </div>
 
       <Card.Group>
@@ -148,30 +204,13 @@ export default function Roadmap() {
         KlickerUZH user group with the following form.
       </p>
       <div className="max-w-lg">
-        <Form>
-          <Form.Field>
-            <Input
-              placeholder="Name"
-              value={name}
-              onChange={(_, { value }) => setName(value)}
-            />
-          </Form.Field>
-          <Form.Field>
-            <Input
-              placeholder="Email"
-              value={email}
-              onChange={(_, { value }) => setEmail(value)}
-            />
-          </Form.Field>
-          <Button
-            onClick={() => {
-              setName('')
-              setEmail('')
-            }}
-          >
-            Submit
-          </Button>
-        </Form>
+        <div id="c7">
+          Ausfüllen{' '}
+          <a href="https://www.bf-tools.uzh.ch/applications/easyforms/index.php?r=app%2Fform&id=7">
+            Online Formular
+          </a>
+          .
+        </div>
       </div>
     </Container>
   )
