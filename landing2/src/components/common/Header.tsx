@@ -21,9 +21,9 @@ function Header() {
               <Link href="/">Home</Link>
             </Menu.Item>
 
-            {/* <Menu.Item>
+            <Menu.Item>
               <Link href="/roadmap">Roadmap</Link>
-            </Menu.Item> */}
+            </Menu.Item>
 
             <Menu.Item>
               <Link href="https://uzh-bf.github.io/klicker-uzh/docs/faq/faq">
