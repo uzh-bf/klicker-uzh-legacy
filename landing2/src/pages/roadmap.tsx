@@ -155,19 +155,22 @@ export default function Roadmap() {
       <h2 className="mt-16">Future Focus Areas</h2>
 
       <h3>2021-2023</h3>
-      <p className="mb-8 prose prose-lg max-w-none">
+      <p className="mb-4 prose prose-lg md:mb-8 max-w-none">
         As part of a project backed by the University of Zurich and
         swissuniversities, the KlickerUZH team will be working on several
         interesting focus areas over the coming years. We will be developing
         best practices and materials, as well as extending the KlickerUZH with
         capabilities that support each of these areas.
       </p>
-      <div className="flex mb-8">
+      <div className="flex flex-col mb-8 md:flex-row">
         <Image
-          className="w-auto h-16 mr-16"
+          className="w-56 mb-4 md:mb-0 md:mr-16 md:w-auto md:h-16"
           src="/img/logo_swissuniversities.png"
         />
-        <Image className="w-auto h-16" src="/img/logo_uzh.jpeg" />
+        <Image
+          className="w-56 mb-4 md:mb-0 md:w-auto md:h-16"
+          src="/img/logo_uzh.jpeg"
+        />
       </div>
 
       <Card.Group>
