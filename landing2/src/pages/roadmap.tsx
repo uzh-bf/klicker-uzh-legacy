@@ -102,7 +102,7 @@ export default function Roadmap() {
       </p>
 
       <div className="max-w-3xl">
-        <div className="mb-4">
+        <div className="mb-6">
           <Card fluid color="green">
             <Card.Content header="Participant Authentication" />
             {/* <Image src="https://place-hold.it/300x100" /> */}

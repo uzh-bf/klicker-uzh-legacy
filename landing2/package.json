@@ -9,6 +9,7 @@
     "export": "next build && next export"
   },
   "dependencies": {
+    "@socialgouv/matomo-next": "1.2.1",
     "axios": "0.21.1",
     "fomantic-ui-css": "2.8.7",
     "next": "10.1.3",

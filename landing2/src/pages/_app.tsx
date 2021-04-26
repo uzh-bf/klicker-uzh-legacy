@@ -1,4 +1,7 @@
+import { useEffect } from 'react'
 import Head from 'next/head'
+
+import { init } from '@socialgouv/matomo-next'
 
 import '../styles/globals.css'
 import 'fomantic-ui-css/semantic.css'
@@ -6,7 +9,14 @@ import 'fomantic-ui-css/semantic.css'
 import Header from '../components/common/Header'
 import Footer from '../components/common/Footer'
 
+const MATOMO_URL = process.env.NEXT_PUBLIC_MATOMO_URL
+const MATOMO_SITE_ID = process.env.NEXT_PUBLIC_MATOMO_SITE_ID
+
 function App({ Component, pageProps }) {
+  useEffect(() => {
+    init({ url: MATOMO_URL, siteId: MATOMO_SITE_ID })
+  }, [])
+
   return (
     <div className="flex flex-col h-full">
       <Head>
